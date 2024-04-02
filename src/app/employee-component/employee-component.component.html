@@ -1,0 +1,14 @@
+<div *ngIf="employees" class="table-container">
+    <table>
+      <tr>
+        <th>Employee Name</th>
+        <th>Total Time Worked</th>
+      </tr>
+      <tr *ngFor="let employee of employees" [style.background-color]="employee.TotalTimeWorked < 100 ? 'red' : 'transparent'">
+        <td>{{ employee.EmployeeName }}</td>
+        <td>{{ employee.TotalTimeWorked }} hours</td>
+      </tr>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
+  
